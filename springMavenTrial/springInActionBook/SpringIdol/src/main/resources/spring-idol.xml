@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Jugo"
+          class="com.springInAction.trials.PhilosiphicalJuggler">
+        <constructor-arg value="4"/>
+        <constructor-arg ref="quote"/>
+    </bean>
+
+    <bean id="quote" class="com.springInAction.trials.Quote"/>
+
+    <bean id="Pinto" class="com.springInAction.trials.Instrumentalist">
+        <property name="instrument" ref="piano"/>
+        <property name="song" value="All the way"/>
+    </bean>
+
+    <bean id="piano" class="com.springInAction.trials.Piano"/>
+
+</beans>
